@@ -45,9 +45,9 @@ export default function LoginPage() {
     <div className="flex min-h-screen items-center justify-center bg-muted/40 p-4">
       <Card className="w-full max-w-sm">
         <CardHeader className="space-y-1">
-          <CardTitle className="text-2xl text-center">Login</CardTitle>
+          <CardTitle className="text-2xl text-center">เข้าสู่ระบบ</CardTitle>
           <CardDescription className="text-center">
-            Enter your credentials to access the อบต. platform
+            กรุณากรอกข้อมูลเพื่อเข้าสู่ระบบ
           </CardDescription>
         </CardHeader>
         <form onSubmit={handleSubmit}>
@@ -62,7 +62,7 @@ export default function LoginPage() {
               <Input
                 id="email"
                 type="email"
-                placeholder="admin@example.com"
+                placeholder="Email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 required
@@ -73,6 +73,7 @@ export default function LoginPage() {
               <Input
                 id="password"
                 type="password"
+                placeholder="Password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 required
@@ -84,12 +85,12 @@ export default function LoginPage() {
               {loading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
               เข้าสู่ระบบ
             </Button>
-            <div className="text-center text-sm text-muted-foreground">
+            {/**      <div className="text-center text-sm text-muted-foreground">
               ยังไม่มีบัญชี?{" "}
               <Link href="/register" className="text-blue-600 hover:underline font-medium">
                 ลงทะเบียนหน่วยงานใหม่
               </Link>
-            </div>
+            </div> */}
           </CardFooter>
         </form>
       </Card>
